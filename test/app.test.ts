@@ -7,4 +7,9 @@ describe('Express App...', () => {
       if (err) throw new Error(err);
     });
   });
+  test('should succeed on GET /default', () => {
+    request(app).get('/default').expect(200).end((err) => {
+      if (err) throw new Error(err);
+    });
+  });
 });
